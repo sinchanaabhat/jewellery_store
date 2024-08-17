@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Supplier</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    form {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 10px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #45a049;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    .error-message {
+        color: red;
+        font-size: 12px;
+    }
+    
+    </style>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add Supplier</h2>
+    <form action="suppliersadd.php" method="post" onsubmit="return validateForm()">
+        <!-- <label for="sid">Supplier ID:</label>
+        <input type="text" id="sid" name="sid"><br><br> -->
+
+        <label for="sname">Supplier Name:</label>
+        <input type="text" id="sname" name="sname" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="phone_no">Phone Number:</label>
+        <input type="text" id="phone_no" name="phone_no" required><br>
+        <div id="phone_error" class="error-message"></div><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var phoneNumber = document.getElementById("phone_no").value;
+            var phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phoneNumber)) {
+                document.getElementById("phone_error").innerHTML = "Phone number must be 10 digits long.";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

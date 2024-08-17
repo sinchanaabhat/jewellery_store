@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+   
+  
+  
+   
+  }
+  html,body{
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /* Header styles */
+  .nav header {
+    background-color: #0a3365;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Container styles */
+  div {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* Button styles */
+  /* button, .next-button {
+    display: inline-block;
+    padding: 50px 50px;
+    background-color: #2020ba;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align:center ;
+    margin-left: 40%;
+  }
+  
+  button:hover, .next-button:hover {
+    background-color: #2063c8;
+  } */
+
+ button, .next-button {
+    display: block;
+    width: 150px; /* Set the width of the buttons */
+    padding: 10px; /* Add some padding around the text */
+    margin: 10px auto; /* Center the buttons horizontally and add some vertical margin */
+    text-align: center; /* Center the text within the buttons */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Add cursor pointer on hover */
+}
+
+button, .next-button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+  
+  /* Heading styles */
+   h3 {
+    margin-bottom: 10px;
+    color: #0b0b0b;
+    text-align: center;
+  }
+  h1{
+    /* margin-bottom: 10px; */
+    padding: 10px;
+    color: #fff;
+  }
+  
+  /* Navigation styles */
+  nav {
+      background-color: #2378ad;
+    padding: 10px;
+    color:#fff;
+    text-align:center;
+  
+  }
+  
+  /* Division styles */
+  .one, .two, .three , .four, .five {
+    background-color: #88c2f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    div {
+      width: 90%;
+    }
+  }

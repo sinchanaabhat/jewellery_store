@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="searchcustomers.css" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Search Supplier</h2>
+    <form action="suppliersearch.php" method="post">
+        <label for="search">Search by SID or Name :</label>
+        <input type="text" id="search" name="search" required>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

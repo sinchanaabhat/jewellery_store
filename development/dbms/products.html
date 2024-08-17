@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="customers.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <header>
+    <h1>PRODUCTS</h1>
+  
+  </nav>
+</header>
+<div class="one">
+  <h3>ADD A NEW PRODUCT</h3>
+    <a href="productadd.html" class="next-button">add product</a>
+  </div>
+
+  <div class="two">
+    <h3>UPDATE PRICE OF PRODUCT</h3>
+      <a href="productupdate.html" class="next-button">update </a>
+    </div>
+
+    <div class="three">
+      <h3>UPDATE WEIGHT FOR PRODUCT</h3>
+        <a href="productname.html" class="next-button">update</a>
+      </div>
+      <div class="four">
+        <h3>DELETE AN EXISTING PRODUCT</h3>
+          <a href="productdelete.html" class="next-button">delete</a>
+        </div>
+
+      <div class="five">
+        <h3>PRODUCTS DETAILS</h3>
+    <button onclick="redirectToProductDetails()">View Details</button>
+
+   
+
+      </div>
+
+      <div>
+        <button onclick="redirecttohpage()">BACK</button>
+      </div>
+
+      <script>
+        function redirectToProductDetails() {
+            // Redirect to the PHP page that displays product details
+            window.location.href = "productdetails.php";
+        }
+
+        function redirecttohpage(){
+          window.location.href = "hpage.html";
+        }
+</script>
+
+   
+</body>
+</html>

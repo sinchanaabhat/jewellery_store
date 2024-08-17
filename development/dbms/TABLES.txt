@@ -1,0 +1,92 @@
+CUSTOMER
+CREATE TABLE Customer(
+                       CID VARCHAR(20) NOT NULL ,
+                       full_name VARCHAR(20) NOT NULL,
+                       address VARCHAR(20) NOT NULL,
+                       phone_no BIGINT NOT NULL,
+                       email VARCHAR NOT NULL,
+                       PRIMARY KEY(CID)
+                      );
+
+Products
+CREATE TABLE Products(
+                       PID VARCHAR(20) NOT NULL ,
+                       pname VARCHAR(20) NOT NULL,
+                       ptype VARCHAR(20) NOT NULL,
+                       metal VARCHAR(20) NOT NULL,
+                       weight DECIMAL(10) NOT NULL,
+                       quantity INT NOT NULL,
+                       price FLOAT NOT NULL,
+                       PRIMARY KEY(PID)
+                      );
+
+Cust_prod
+CREATE TABLE Cust_prod(
+                        CID VARCHAR(20) NOT NULL,
+                        PID VARCHAR(20) NOT NULL,
+                        TID VARCHAR(20) NOT NULL,
+                        quantity INT NOT NULL,
+                        PRIMARY KEY(CID,PID,TID),
+                        FOREIGN KEY(CID) REFERENCES Customer(CID) ON DELETE CASCADE,
+                        FOREIGN KEY(PID) REFERENCES Produts(PID) ON DELETE CASCADE
+                       );
+Transaction
+CREATE TABLE Transaction(
+                          TID VARCHAR(20) NOT NULL,
+                          tamount FLOAT NOT NULL,
+                          tdate DATE NOT NULL,
+                          tmethod VARCHAR(20) NOT NULL,
+                          PRIMARY KEY(TID),
+                          FOREIGN KEY(TID) REFERENCES Cust_prod(TID) ON DELETE CASCADE
+                          );
+
+
+
+Supplier
+CREATE TABLE Supplier(
+                       SID VARCHAR(20) NOT NULL ,
+                       sname VARCHAR(20) NOT NULL,
+                       address VARCHAR(20) NOT NULL,
+                       phone_no BIGINT NOT NULL,
+                       PRIMARY KEY(SID)
+                      );  
+
+Supp_prod   
+CREATE TABLE Supp_prod(
+                        payID INT NOT NULL,
+                        PID VARCHAR(20) NOT NULL,
+                        SID VARCHAR(20) NOT NULL,
+                        quantity INT NOT NULL,
+                        PRIMARY KEY(payID),
+                        FOREIGN KEY(SID) REFERENCES Supplier(SID) ON DELETE CASCADE,
+                        FOREIGN KEY(PID) REFERENCES Produts(PID) ON DELETE CASCADE
+                       );
+
+
+
+Orders
+CREATE TABLE Orders(
+                        OID VARCHAR(20) NOT NULL,
+                        PID VARCHAR(20) NOT NULL,
+                        SID VARCHAR(20) NOT NULL,
+                        Quantity INT NOT NULL,
+                        price FLOAT NOT NULL,
+                        received TINYINT(1) NOT NULL,
+                        PRIMARY KEY(OID),
+                        FOREIGN KEY(SID) REFERENCES Supplier(SID) ON DELETE CASCADE,
+                        FOREIGN KEY(PID) REFERENCES Produts(PID) ON DELETE CASCADE
+                       );
+Payment
+
+CREATE TABLE Payment(        
+                          payID INT NOT NULL,
+                          SID VARCHAR(20) NOT NULL,
+                          Pamount FLOAT NOT NULL,
+                          Pdate DATE NOT NULL,
+                          Pmethod VARCHAR(20) NOT NULL,
+                          PRIMARY KEY(payID,SID),
+                          FOREIGN KEY(SID) REFERENCES Supplier(SID) ON DELETE CASCADE
+                          );
+
+
+                  

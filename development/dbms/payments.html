@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="customers.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <header>
+    <h1>PAYMENTS</h1>
+  
+  </nav>
+</header>
+<div class="one">
+  <h3>ADD PAYMENT DETAILS</h3>
+    <a href="paymentsadd.html" class="next-button">Add Payment</a>
+  </div>
+    <!-- <div class="two">
+      <h3>SEARCH FOR PAYMENT</h3>
+        <a href="paymentsearch.html" class="next-button">Search</a>
+      </div> -->
+
+      <div class="three">
+        <h3>DISPLAY DETAILS</h3>
+    <button onclick="redirectTopaymentDetails()">View Details</button>
+
+   
+
+      </div>
+      <div>
+        <button onclick="redirecttohpage()">BACK</button>
+      </div>
+
+      <script>
+        
+        function redirecttohpage(){
+          window.location.href = "hpage.html";
+        }
+
+      
+        function redirectTopaymentDetails() {
+            // Redirect to the PHP page that displays product details
+            window.location.href = "paymentdetails.php";
+        }
+</script>
+
+   
+</body>
+</html>

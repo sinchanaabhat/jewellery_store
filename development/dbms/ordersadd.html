@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link href="productadd.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h2>Place Order</h2>
+    <form action="ordersadd.php" method="post" id="orderForm">
+        <label for="productType">Product Type:</label>
+        <input type="text" id="productType" name="productType" autocomplete="off">
+        <div id="productTypeOptions"></div>
+
+        <label for="supplier">Supplier Name:</label>
+        <input type="text" id="supplier" name="supplier" autocomplete="off">
+        <div id="supplierOptions"></div>
+
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity">
+
+        <input type="submit" value="Place Order">
+    </form>
+
+    <script>
+    $(document).ready(function(){
+        $('#productType').keyup(function(){
+            var inputText = $(this).val().toLowerCase();
+            if(inputText.length >= 3){
+                $.post('fetch_product_types.php', {input: inputText}, function(data){
+                    $('#productTypeOptions').html(data);
+                });
+            }
+        });
+
+        $('#productTypeOptions').on('click', 'li', function(){
+            var selectedProductType = $(this).text();
+            $('#productType').val(selectedProductType);
+            $('#productTypeOptions').html('');
+        });
+
+        $('#supplier').keyup(function(){
+            var inputText = $(this).val().toLowerCase();
+            if(inputText.length >= 3){
+                $.post('fetch_suppliers.php', {input: inputText}, function(data){
+                    $('#supplierOptions').html(data);
+                });
+            }
+        });
+
+        $('#supplierOptions').on('click', 'li', function(){
+            var selectedSupplier = $(this).text();
+            $('#supplier').val(selectedSupplier);
+            $('#supplierOptions').html('');
+        });
+
+        // Prevent form submission on Enter keypress
+        $('#orderForm').on('keypress', function(e) {
+            if(e.which === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Page Title</title>
+<link href="homepage.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'homepage.php', // Your PHP file that fetches data
+                type: 'GET',
+                success: function(data) {
+                    $('#result').html(data); // Update HTML content with the fetched data
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome Admin :)</h1>
+  <div class="image-container">
+    <img src="aintro.1.png" alt="Your Image">
+  </div>
+  <div class="text-container">
+    <div id="result"></div>
+  </div>
+  <a href="hpage.html" class="next-button">Next</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Product</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Search Product</h2>
+    <form action="search_product.php" method="post">
+        <label for="search">Search by PID or PType:</label>
+        <input type="text" id="search" name="search" required>
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>

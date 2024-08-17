@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="productdelete.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Product</h2>
+        <form action="productdelete.php" method="POST">
+            <label for="pid">Enter Product ID:</label>
+            <input type="text" id="pid" name="pid" placeholder="Product ID"><br><br>
+
+            <label for="pname">Enter Product Name:</label>
+            <input type="text" id="pname" name="pname" placeholder="Product Name"><br><br>
+
+            <input type="submit" value="Delete Product">
+        </form>
+    </div>
+</body>
+</html>

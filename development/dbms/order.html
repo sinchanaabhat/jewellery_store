@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="customers.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <header>
+    <h1>ORDERS</h1>
+  
+  </nav>
+</header>
+<div class="one">
+  <h3>ADD ORDERS</h3>
+    <a href="ordersadd.html" class="next-button">Add Order</a>
+  </div>
+    <div class="two">
+      <h3>SEARCH FOR ORDER</h3>
+        <a href="ordersearch.html" class="next-button">Search</a>
+      </div>
+
+      <div class="three">
+        <h3>DISPLAY DETAILS</h3>
+    <button onclick="redirectToorderDetails()">View Details</button>
+
+   
+
+      </div>
+      <div>
+        <button onclick="redirecttohpage()">BACK</button>
+      </div>
+
+      <script>
+        
+        function redirecttohpage(){
+          window.location.href = "hpage.html";
+        }
+
+
+      
+        function redirectToorderDetails() {
+            // Redirect to the PHP page that displays product details
+            window.location.href = "ordersdisplay.php";
+        }
+</script>
+
+   
+</body>
+</html>

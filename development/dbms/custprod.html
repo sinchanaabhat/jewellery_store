@@ -1,0 +1,115 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple PID Form</title>
+</head>
+<body>
+    <h2>Enter Customer ID (CID) and Product IDs (PID)</h2>
+    <form method="POST" action="process.php">
+        <label for="cid">CID:</label>
+        <input type="text" id="cid" name="cid">
+        <br><br>
+        <label for="pid">PID (separate multiple PIDs with commas):</label>
+        <input type="text" id="pid" name="pid">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Product Form</title>
+</head>
+<body>
+    <h2>Customer Product Form</h2>
+    <form action="process.php" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name"><br><br>
+
+        <label for="pname">Product Name:</label>
+        <select id="pname" name="pname"></select>
+           
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer and Product Lookup</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #45a049;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+    </style>
+</head>
+<body>
+    <h2>Lookup Customer and Product</h2>
+    <form method="post" action="lookup.php">
+        <label for="full_name">Customer Full Name:</label>
+        <input type="text" id="full_name" name="full_name">
+        <br><br>
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name">
+        <br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

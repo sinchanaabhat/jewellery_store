@@ -1,0 +1,44 @@
+
+        /* CSS styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        
+        header {
+            background-color: #81b2ea;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            
+
+        }
+
+        nav {
+            display: flex;
+            justify-content:center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #2378ad;
+        }
+
+        .image-container{
+            text-align: center;
+            margin-top: 18%;
+           
+        }
+
+        
